@@ -1,5 +1,12 @@
 # Referencing in CRUD Mongoose
 
+If you are new to MongoDB it is natural to ask how should one structure the schema for One-to-One or One-to-Many relationship.
+
+NoSQL databases like MongoDB work differently from the Relational Databases like MySQL, PostgreSQL, Oracle, Microsoft SQL, and so on. Relationships in the traditional sense don’t really exist in MongoDB like they do in MySQL. 
+Lets take a look at how you can work with related data, even though it is not explicitly enforced by MongoDB. We’ll have a look at Reference Based Relationships (Normalization) as well as Embedded Documents Relationships (Denormalization).
+
+
+
 ## Single ObjectId reference
 ### Reference other models by id
 Sub docs are difficult when it comes to updating, because all duplicates must be updated. But we can reference by ID to get around this.
