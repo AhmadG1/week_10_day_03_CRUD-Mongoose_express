@@ -17,6 +17,7 @@ Let make 2 more models from our current `Company` model named `Driver` and `Car`
 Build the following routes for the following models:
 
 `:Company`
+
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /companys/ | GET | index.ejs | Company.find()|
@@ -28,6 +29,7 @@ Build the following routes for the following models:
 |7| Destroy |/companys/:id|||||
 
 `:Car`
+
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /cars/ | GET | index.ejs | Car.find()|
@@ -39,6 +41,7 @@ Build the following routes for the following models:
 |7| Destroy |/cars/:id|||||
 
 `:Driver`
+
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /drivers/ | GET | index.ejs | Driver.find()|
