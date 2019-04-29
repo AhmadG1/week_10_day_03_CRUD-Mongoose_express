@@ -8,31 +8,37 @@ Lets break our app into more models and pass references.
 
 Let's keep track of our Restful Routes as we build out our app. Copy/paste this table into a fresh file, open an excel/sheets spreadsheet or draw on a piece of paper. Feel free to add more columns and notes to help you put it all together.
 
-Index, New and Create has been completed for you.
+Let make 2 more models from our current `Company` model named `Driver` and `Car`
+
+`Car` model will be our schema to store all cars that will belong to a company. 
+`Driver` model will be our schema to store all drivers which belong to a company and can driver a car.
 
 #### Restful Routes
+Build the following routes for the following models:
+
+`:Company`
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /companys/ | GET | index.ejs | Company.find()|
-|2| Show |||||
+|2| Show |/companys/:id ||||
 |3| New | /companys/new | GET | new.ejs | none |
-|4| Create | /companys/ | POS T| none | Company.create(req.body)|
-|5| Edit |||||
-|6| Update |||||
-|7| Destroy ||||||
+|4| Create | /companys/ | POST| none | Company.create(req.body)|
+|5| Edit |/companys/:id||||
+|6| Update |/companys/:id||||
+|7| Destroy |/companys/:id|||||
 
-
+`:Car`
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /cars/ | GET | index.ejs | Car.find()|
-|2| Show |||||
+|2| Show |/cars/:id||||
 |3| New | /cars/new | GET | new.ejs | none |
 |4| Create | /cars/ | POST| none | Car.create(req.body)|
-|5| Edit |||||
-|6| Update |||||
-|7| Destroy ||||||
+|5| Edit |/cars/:id||||
+|6| Update |/cars/:id||||
+|7| Destroy |/cars/:id|||||
 
-
+`:Driver`
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /drivers/ | GET | index.ejs | Driver.find()|
