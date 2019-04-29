@@ -21,42 +21,48 @@ Build the following routes for the following models:
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /companys/ | GET | index.ejs | Company.find()|
-|2| Show |/companys/:id ||||
+|2| Show |/companys/:id |GET|show.ejs|Company.findById()|
 |3| New | /companys/new | GET | new.ejs | none |
 |4| Create | /companys/ | POST| none | Company.create(req.body)|
-|5| Edit |/companys/:id||||
-|6| Update |/companys/:id||||
-|7| Destroy |/companys/:id|||||
+|5| Edit |/companys/:id|GET|edit.ejs||
+|6| Update |/companys/:id|PUT|update.ejs|Company.findByIdAndUpdate()|
+|7| Destroy |/companys/:id|DELETE|none|||
 
 `:Car`
 
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /cars/ | GET | index.ejs | Car.find()|
-|2| Show |/cars/:id||||
+|2| Show |/cars/:id|GET|show.ejs|Car.findById()|
 |3| New | /cars/new | GET | new.ejs | none |
 |4| Create | /cars/ | POST| none | Car.create(req.body)|
-|5| Edit |/cars/:id||||
-|6| Update |/cars/:id||||
-|7| Destroy |/cars/:id|||||
+|5| Edit |/cars/:id||edit.ejs||
+|6| Update |/cars/:id|PUT|||
+|7| Destroy |/cars/:id|DELETE||||
 
 `:Driver`
 
 |#|Action|URL|HTTP Verb|EJS view filename|mongoose method|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |1| Index | /drivers/ | GET | index.ejs | Driver.find()|
-|2| Show |||||
+|2| Show |/drivers/:id| GET|||
 |3| New | /drivers/new | GET | new.ejs | none |
-|4| Create | /drivers/ | POS T| none | Driver.create(req.body)|
-|5| Edit |||||
-|6| Update |||||
-|7| Destroy ||||||
+|4| Create | /drivers/ | POST| none | Driver.create(req.body)|
+|5| Edit |/drivers/:id||edit.ejs||
+|6| Update |/drivers/:id| PUT|||
+|7| Destroy |/drivers/:id|DELETE|none|||
 
 
 ## Step 1
  1. Create one model each for `Car` and `Driver` with the data embedded in :cars and :drivers
  1. Think about this, One `Company` *can have many* `Cars` and `Drivers`
  1. One `Driver` *can driver many* `Cars`
+ 1. Modify your Company, Driver and Car models to accomodate this by referencing `Car` in `Company` and `Driver` in `Company`.
+1. One more reference is required please complete this.
 
 ## Step 2
- - Create 
+ 1. Create new routes based on the routes listed above and any more routes that maybe required.
+ 1. Create the views for each of these models for CRUD
+
+## Step 3
+
