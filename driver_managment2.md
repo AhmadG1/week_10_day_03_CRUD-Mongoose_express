@@ -55,14 +55,18 @@ Build the following routes for the following models:
 
 ## Step 1
  1. Create one model each for `Car` and `Driver` with the data embedded in :cars and :drivers
+ 1. Create the routes above
  1. Think about this, One `Company` *can have many* `Cars` and `Drivers`
  1. One `Driver` *can driver many* `Cars`
- 1. Modify your Company, Driver and Car models to accomodate this by referencing `Car` in `Company` and `Driver` in `Company`.
-1. One more reference is required please complete this.
+ 1. Modify your Company, Driver and Car models to accomodate this by referencing `Car`(ObjectId) in `Company` and `Driver` (ObjectId) in `Company`. (drivers : [{type: Types.Schema.ObjectId, ref: 'Driver'}])
+ 1. One more reference is required please complete this.
 
 ## Step 2
  1. Create new routes based on the routes listed above and any more routes that maybe required.
  1. Create the views for each of these models for CRUD
 
 ## Step 3
-
+1. Push some data into the cars and drivers collections
+1. Now create a route that pushes cars`ObjectId` into Company this can be `\company\:companyid\car\add`
+1. Do the same for Driver i.e. the route can be `\drivers\:driverid\car\add`
+1. Modify your Driver and Company 
