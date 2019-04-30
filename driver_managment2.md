@@ -55,6 +55,7 @@ Build the following routes for the following models:
 
 ## Step 1
  1. Create one model each for `Car` and `Driver` with the data embedded in :cars and :drivers
+ 1. For drivers
  1. Create the routes above
  1. Think about this, One `Company` *can have many* `Cars` and `Drivers`
  1. One `Driver` *can driver many* `Cars`
@@ -69,4 +70,12 @@ Build the following routes for the following models:
 1. Push some data into the cars and drivers collections
 1. Now create a route that pushes cars`ObjectId` into Company this can be `\company\:companyid\car\add`
 1. Do the same for Driver i.e. the route can be `\drivers\:driverid\car\add`
-1. Modify your Driver and Company 
+1. Create a views page so that you can update Company and push the ObjectId from Car into the particular company it belongs to.  
+i.e.`$push:{}`  [mongodb push to array](https://docs.mongodb.com/manual/reference/operator/update/push/)
+
+> Do the same for Driver and Car
+
+## Step 4
+1. Now when you call the route `/company/:companyid`, display the company and all the drivers and cars belonging to that company
+> `.populate()`
+> Do the same for Driver with Cars.
